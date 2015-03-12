@@ -51,6 +51,7 @@ RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter bu
 RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter build-tools-21.1.1 
 RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter  extra
 RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter android-20
+RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter android-10
 # Update PATH for the above.
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
