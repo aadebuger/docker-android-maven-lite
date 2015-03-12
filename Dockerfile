@@ -1,5 +1,5 @@
 
-ckerfile to build an image with the local version of golang.org/x/mobile.
+#Dockerfile to build an image with the local version of golang.org/x/mobile.
 #
 #  > docker build -t mobile $GOPATH/src/golang.org/x/mobile
 #  > docker run -it --rm -v $GOPATH/src:/src mobile
