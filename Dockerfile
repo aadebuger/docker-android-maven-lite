@@ -16,10 +16,10 @@ RUN curl -L http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.2-bin.tar
 ENV ANT_HOME /usr/local/apache-ant-1.9.2
 
 
-RUN curl -L   http://mirror.bit.edu.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar xz -C /usr/local
-#RUN  add-apt-repository ppa:natecarlson/maven3
-#RUN apt-get update 
-#RUN   apt-get -y install maven3
+#RUN curl -L   http://mirror.bit.edu.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar xz -C /usr/local
+RUN  add-apt-repository ppa:natecarlson/maven3
+RUN apt-get update 
+RUN   apt-get -y install maven3
 
 RUN  ln -s /usr/bin/mvn3 /usr/bin/mvn
 # Install Android SDK.
