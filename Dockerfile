@@ -17,11 +17,11 @@ ENV ANT_HOME /usr/local/apache-ant-1.9.2
 
 
 #RUN curl -L   http://mirror.bit.edu.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar xz -C /usr/local
-RUN  add-apt-repository ppa:natecarlson/maven3
-RUN apt-get update 
-RUN   apt-get -y install maven3
+#RUN  add-apt-repository ppa:natecarlson/maven3
+#RUN apt-get update 
+#RUN   apt-get -y install maven3
 
-RUN  ln -s /usr/bin/mvn3 /usr/bin/mvn
+RUN  ln -s /usr/local/apache-maven-3.2.5-bin/mvn /usr/bin/mvn
 # Install Android SDK.
 #RUN curl -L http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz | tar xz -C /usr/local
 RUN curl -L http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz | tar xz -C /usr/local
@@ -65,6 +65,6 @@ run apt-get install -y lib32stdc++6 lib32z1 lib32ncurses5 lib32bz2-1.0
 #run cd /data/maven-android-sdk-deployer/ && /usr/local/apache-maven-3.2.5/bin/mvn  install  -P 5.0 -rf :google-apis-21
 #run cd /data/maven-android-sdk-deployer/extras && /usr/local/apache-maven-3.2.5/bin/mvn  clean install  
 run wget http://dl-ssl.google.com/android/repository/android_m2repository_r11.zip
-run unzip android_m2repository_r11.zip -d /usr/local/android-sdk-linux/extras/android
+run unzip -o android_m2repository_r11.zip   -d /usr/local/android-sdk-linux/extras/android
 run wget http://dl-ssl.google.com/android/repository/google_m2repository_r15.zip
-run unzip -o google_m2repository_r15.zip  -d /usr/local/android-sdk-linux/extras/android
+run unzip -o google_m2repository_r15.zip   -d /usr/local/android-sdk-linux/extras/android
