@@ -55,6 +55,7 @@ RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter an
 # Update PATH for the above.
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
+ENV PATH $PATH:/usr/local/apache-ant-1.9.2/bin
 #ENV PATH $PATH:$NDK_ROOT
 #kENV PATH $PATH:$ANT_HOME/bin
 #ENV PATH $PATH:$GRADLE_HOME/bin
