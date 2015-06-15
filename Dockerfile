@@ -36,6 +36,9 @@ RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter bu
 #RUN $NDK_ROOT/build/tools/make-standalone-toolchain.sh --platform=android-9 --install-dir=$NDK_ROOT --system=linux-x86_64
 
 # Install Gradle 2.1
+RUN curl -L http://services.gradle.org/distributions/gradle-2.2.1-all.zip -o /tmp/gradle-2.2.1-all.zip && unzip /tmp/gradle-2.2.1-all.zip -d /usr/local && rm /tmp/gradle-2.2.1-all.zip
+ENV GRADLE_HOME /usr/local/gradle-2.2.1
+
 # : android-gradle compatibility
 #   http://tools.android.com/tech-docs/new-build-system/version-compatibility
 RUN echo y | $ANDROID_HOME/tools/android update sdk --no-ui --all -s --filter build-tools-19.1.0 && \
